@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9590F6F25978D1700DE5BA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9590F6E25978D1700DE5BA0 /* AppDelegate.swift */; };
+		F9590F7125978D1700DE5BA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9590F7025978D1700DE5BA0 /* ViewController.swift */; };
+		F9590F7425978D1700DE5BA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9590F7225978D1700DE5BA0 /* Main.storyboard */; };
+		F9590F7725978D1700DE5BA0 /* AlcoPedia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9590F7525978D1700DE5BA0 /* AlcoPedia.xcdatamodeld */; };
+		F9590F7925978D1800DE5BA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9590F7825978D1800DE5BA0 /* Assets.xcassets */; };
+		F9590F7C25978D1800DE5BA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9590F7A25978D1800DE5BA0 /* LaunchScreen.storyboard */; };
+		F9590F8725978D1800DE5BA0 /* AlcoPediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9590F8625978D1800DE5BA0 /* AlcoPediaTests.swift */; };
+		F9590F9225978D1800DE5BA0 /* AlcoPediaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9590F9125978D1800DE5BA0 /* AlcoPediaUITests.swift */; };
+		F9590FA025978DA300DE5BA0 /* AlcoholType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9590F9F25978DA300DE5BA0 /* AlcoholType.swift */; };
+		F9590FA3259791D100DE5BA0 /* Alcohol+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9590FA1259791D100DE5BA0 /* Alcohol+CoreDataClass.swift */; };
+		F9590FA4259791D100DE5BA0 /* Alcohol+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9590FA2259791D100DE5BA0 /* Alcohol+CoreDataProperties.swift */; };
+		F9590FA72597977500DE5BA0 /* AlcoholDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9590FA62597977500DE5BA0 /* AlcoholDao.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9590F8325978D1800DE5BA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9590F6325978D1700DE5BA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9590F6A25978D1700DE5BA0;
+			remoteInfo = AlcoPedia;
+		};
+		F9590F8E25978D1800DE5BA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9590F6325978D1700DE5BA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9590F6A25978D1700DE5BA0;
+			remoteInfo = AlcoPedia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F9590F6B25978D1700DE5BA0 /* AlcoPedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlcoPedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9590F6E25978D1700DE5BA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9590F7025978D1700DE5BA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F9590F7325978D1700DE5BA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9590F7625978D1700DE5BA0 /* AlcoPedia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AlcoPedia.xcdatamodel; sourceTree = "<group>"; };
+		F9590F7825978D1800DE5BA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9590F7B25978D1800DE5BA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F9590F7D25978D1800DE5BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9590F8225978D1800DE5BA0 /* AlcoPediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlcoPediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9590F8625978D1800DE5BA0 /* AlcoPediaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoPediaTests.swift; sourceTree = "<group>"; };
+		F9590F8825978D1800DE5BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9590F8D25978D1800DE5BA0 /* AlcoPediaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlcoPediaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9590F9125978D1800DE5BA0 /* AlcoPediaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoPediaUITests.swift; sourceTree = "<group>"; };
+		F9590F9325978D1800DE5BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9590F9F25978DA300DE5BA0 /* AlcoholType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholType.swift; sourceTree = "<group>"; };
+		F9590FA1259791D100DE5BA0 /* Alcohol+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alcohol+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F9590FA2259791D100DE5BA0 /* Alcohol+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alcohol+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F9590FA62597977500DE5BA0 /* AlcoholDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholDao.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9590F6825978D1700DE5BA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9590F7F25978D1800DE5BA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9590F8A25978D1800DE5BA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F9590F6225978D1700DE5BA0 = {
+			isa = PBXGroup;
+			children = (
+				F9590F6D25978D1700DE5BA0 /* AlcoPedia */,
+				F9590F8525978D1800DE5BA0 /* AlcoPediaTests */,
+				F9590F9025978D1800DE5BA0 /* AlcoPediaUITests */,
+				F9590F6C25978D1700DE5BA0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9590F6C25978D1700DE5BA0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9590F6B25978D1700DE5BA0 /* AlcoPedia.app */,
+				F9590F8225978D1800DE5BA0 /* AlcoPediaTests.xctest */,
+				F9590F8D25978D1800DE5BA0 /* AlcoPediaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9590F6D25978D1700DE5BA0 /* AlcoPedia */ = {
+			isa = PBXGroup;
+			children = (
+				F9590FA5259791E500DE5BA0 /* entity */,
+				F9590F6E25978D1700DE5BA0 /* AppDelegate.swift */,
+				F9590FA62597977500DE5BA0 /* AlcoholDao.swift */,
+				F9590F7025978D1700DE5BA0 /* ViewController.swift */,
+				F9590F9F25978DA300DE5BA0 /* AlcoholType.swift */,
+				F9590F7225978D1700DE5BA0 /* Main.storyboard */,
+				F9590F7825978D1800DE5BA0 /* Assets.xcassets */,
+				F9590F7A25978D1800DE5BA0 /* LaunchScreen.storyboard */,
+				F9590F7D25978D1800DE5BA0 /* Info.plist */,
+				F9590F7525978D1700DE5BA0 /* AlcoPedia.xcdatamodeld */,
+			);
+			path = AlcoPedia;
+			sourceTree = "<group>";
+		};
+		F9590F8525978D1800DE5BA0 /* AlcoPediaTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9590F8625978D1800DE5BA0 /* AlcoPediaTests.swift */,
+				F9590F8825978D1800DE5BA0 /* Info.plist */,
+			);
+			path = AlcoPediaTests;
+			sourceTree = "<group>";
+		};
+		F9590F9025978D1800DE5BA0 /* AlcoPediaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F9590F9125978D1800DE5BA0 /* AlcoPediaUITests.swift */,
+				F9590F9325978D1800DE5BA0 /* Info.plist */,
+			);
+			path = AlcoPediaUITests;
+			sourceTree = "<group>";
+		};
+		F9590FA5259791E500DE5BA0 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				F9590FA1259791D100DE5BA0 /* Alcohol+CoreDataClass.swift */,
+				F9590FA2259791D100DE5BA0 /* Alcohol+CoreDataProperties.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9590F6A25978D1700DE5BA0 /* AlcoPedia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9590F9625978D1800DE5BA0 /* Build configuration list for PBXNativeTarget "AlcoPedia" */;
+			buildPhases = (
+				F9590F6725978D1700DE5BA0 /* Sources */,
+				F9590F6825978D1700DE5BA0 /* Frameworks */,
+				F9590F6925978D1700DE5BA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlcoPedia;
+			productName = AlcoPedia;
+			productReference = F9590F6B25978D1700DE5BA0 /* AlcoPedia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9590F8125978D1800DE5BA0 /* AlcoPediaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9590F9925978D1800DE5BA0 /* Build configuration list for PBXNativeTarget "AlcoPediaTests" */;
+			buildPhases = (
+				F9590F7E25978D1800DE5BA0 /* Sources */,
+				F9590F7F25978D1800DE5BA0 /* Frameworks */,
+				F9590F8025978D1800DE5BA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9590F8425978D1800DE5BA0 /* PBXTargetDependency */,
+			);
+			name = AlcoPediaTests;
+			productName = AlcoPediaTests;
+			productReference = F9590F8225978D1800DE5BA0 /* AlcoPediaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F9590F8C25978D1800DE5BA0 /* AlcoPediaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9590F9C25978D1800DE5BA0 /* Build configuration list for PBXNativeTarget "AlcoPediaUITests" */;
+			buildPhases = (
+				F9590F8925978D1800DE5BA0 /* Sources */,
+				F9590F8A25978D1800DE5BA0 /* Frameworks */,
+				F9590F8B25978D1800DE5BA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9590F8F25978D1800DE5BA0 /* PBXTargetDependency */,
+			);
+			name = AlcoPediaUITests;
+			productName = AlcoPediaUITests;
+			productReference = F9590F8D25978D1800DE5BA0 /* AlcoPediaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9590F6325978D1700DE5BA0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Mikalai Kuts";
+				TargetAttributes = {
+					F9590F6A25978D1700DE5BA0 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					F9590F8125978D1800DE5BA0 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F9590F6A25978D1700DE5BA0;
+					};
+					F9590F8C25978D1800DE5BA0 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = F9590F6A25978D1700DE5BA0;
+					};
+				};
+			};
+			buildConfigurationList = F9590F6625978D1700DE5BA0 /* Build configuration list for PBXProject "AlcoPedia" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9590F6225978D1700DE5BA0;
+			productRefGroup = F9590F6C25978D1700DE5BA0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9590F6A25978D1700DE5BA0 /* AlcoPedia */,
+				F9590F8125978D1800DE5BA0 /* AlcoPediaTests */,
+				F9590F8C25978D1800DE5BA0 /* AlcoPediaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9590F6925978D1700DE5BA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9590F7C25978D1800DE5BA0 /* LaunchScreen.storyboard in Resources */,
+				F9590F7925978D1800DE5BA0 /* Assets.xcassets in Resources */,
+				F9590F7425978D1700DE5BA0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9590F8025978D1800DE5BA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9590F8B25978D1800DE5BA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9590F6725978D1700DE5BA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9590FA4259791D100DE5BA0 /* Alcohol+CoreDataProperties.swift in Sources */,
+				F9590FA025978DA300DE5BA0 /* AlcoholType.swift in Sources */,
+				F9590F7725978D1700DE5BA0 /* AlcoPedia.xcdatamodeld in Sources */,
+				F9590FA72597977500DE5BA0 /* AlcoholDao.swift in Sources */,
+				F9590FA3259791D100DE5BA0 /* Alcohol+CoreDataClass.swift in Sources */,
+				F9590F7125978D1700DE5BA0 /* ViewController.swift in Sources */,
+				F9590F6F25978D1700DE5BA0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9590F7E25978D1800DE5BA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9590F8725978D1800DE5BA0 /* AlcoPediaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9590F8925978D1800DE5BA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9590F9225978D1800DE5BA0 /* AlcoPediaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9590F8425978D1800DE5BA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9590F6A25978D1700DE5BA0 /* AlcoPedia */;
+			targetProxy = F9590F8325978D1800DE5BA0 /* PBXContainerItemProxy */;
+		};
+		F9590F8F25978D1800DE5BA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9590F6A25978D1700DE5BA0 /* AlcoPedia */;
+			targetProxy = F9590F8E25978D1800DE5BA0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F9590F7225978D1700DE5BA0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9590F7325978D1700DE5BA0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9590F7A25978D1800DE5BA0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9590F7B25978D1800DE5BA0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F9590F9425978D1800DE5BA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F9590F9525978D1800DE5BA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9590F9725978D1800DE5BA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KQU4E2RYX9;
+				INFOPLIST_FILE = AlcoPedia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MikalaiKuts.AlcoPedia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9590F9825978D1800DE5BA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KQU4E2RYX9;
+				INFOPLIST_FILE = AlcoPedia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MikalaiKuts.AlcoPedia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F9590F9A25978D1800DE5BA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AlcoPediaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MikalaiKuts.AlcoPediaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlcoPedia.app/AlcoPedia";
+			};
+			name = Debug;
+		};
+		F9590F9B25978D1800DE5BA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AlcoPediaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MikalaiKuts.AlcoPediaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlcoPedia.app/AlcoPedia";
+			};
+			name = Release;
+		};
+		F9590F9D25978D1800DE5BA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AlcoPediaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MikalaiKuts.AlcoPediaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AlcoPedia;
+			};
+			name = Debug;
+		};
+		F9590F9E25978D1800DE5BA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AlcoPediaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MikalaiKuts.AlcoPediaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AlcoPedia;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9590F6625978D1700DE5BA0 /* Build configuration list for PBXProject "AlcoPedia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9590F9425978D1800DE5BA0 /* Debug */,
+				F9590F9525978D1800DE5BA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9590F9625978D1800DE5BA0 /* Build configuration list for PBXNativeTarget "AlcoPedia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9590F9725978D1800DE5BA0 /* Debug */,
+				F9590F9825978D1800DE5BA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9590F9925978D1800DE5BA0 /* Build configuration list for PBXNativeTarget "AlcoPediaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9590F9A25978D1800DE5BA0 /* Debug */,
+				F9590F9B25978D1800DE5BA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9590F9C25978D1800DE5BA0 /* Build configuration list for PBXNativeTarget "AlcoPediaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9590F9D25978D1800DE5BA0 /* Debug */,
+				F9590F9E25978D1800DE5BA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F9590F7525978D1700DE5BA0 /* AlcoPedia.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F9590F7625978D1700DE5BA0 /* AlcoPedia.xcdatamodel */,
+			);
+			currentVersion = F9590F7625978D1700DE5BA0 /* AlcoPedia.xcdatamodel */;
+			path = AlcoPedia.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F9590F6325978D1700DE5BA0 /* Project object */;
+}
