@@ -15,10 +15,14 @@
 		F9590F7C25978D1800DE5BA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9590F7A25978D1800DE5BA0 /* LaunchScreen.storyboard */; };
 		F9590F8725978D1800DE5BA0 /* AlcoPediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9590F8625978D1800DE5BA0 /* AlcoPediaTests.swift */; };
 		F9590F9225978D1800DE5BA0 /* AlcoPediaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9590F9125978D1800DE5BA0 /* AlcoPediaUITests.swift */; };
-		F9590FA025978DA300DE5BA0 /* AlcoholType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9590F9F25978DA300DE5BA0 /* AlcoholType.swift */; };
 		F9590FA3259791D100DE5BA0 /* Alcohol+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9590FA1259791D100DE5BA0 /* Alcohol+CoreDataClass.swift */; };
 		F9590FA4259791D100DE5BA0 /* Alcohol+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9590FA2259791D100DE5BA0 /* Alcohol+CoreDataProperties.swift */; };
 		F9590FA72597977500DE5BA0 /* AlcoholDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9590FA62597977500DE5BA0 /* AlcoholDao.swift */; };
+		F9C4DE5C259B465B00D4782B /* Cockatail+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C4DE5A259B465B00D4782B /* Cockatail+CoreDataClass.swift */; };
+		F9C4DE5D259B465B00D4782B /* Cockatail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C4DE5B259B465B00D4782B /* Cockatail+CoreDataProperties.swift */; };
+		F9C4DE60259B8E8E00D4782B /* CocktailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C4DE5E259B8E8E00D4782B /* CocktailsViewController.swift */; };
+		F9C4DE61259B8E8E00D4782B /* CocktailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9C4DE5F259B8E8E00D4782B /* CocktailsViewController.xib */; };
+		F9C4DE64259BD54D00D4782B /* AlcoholUISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C4DE63259BD54D00D4782B /* AlcoholUISwitch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +57,14 @@
 		F9590F8D25978D1800DE5BA0 /* AlcoPediaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlcoPediaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9590F9125978D1800DE5BA0 /* AlcoPediaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoPediaUITests.swift; sourceTree = "<group>"; };
 		F9590F9325978D1800DE5BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9590F9F25978DA300DE5BA0 /* AlcoholType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholType.swift; sourceTree = "<group>"; };
 		F9590FA1259791D100DE5BA0 /* Alcohol+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alcohol+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F9590FA2259791D100DE5BA0 /* Alcohol+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alcohol+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F9590FA62597977500DE5BA0 /* AlcoholDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholDao.swift; sourceTree = "<group>"; };
+		F9C4DE5A259B465B00D4782B /* Cockatail+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cockatail+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F9C4DE5B259B465B00D4782B /* Cockatail+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cockatail+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F9C4DE5E259B8E8E00D4782B /* CocktailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsViewController.swift; sourceTree = "<group>"; };
+		F9C4DE5F259B8E8E00D4782B /* CocktailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CocktailsViewController.xib; sourceTree = "<group>"; };
+		F9C4DE63259BD54D00D4782B /* AlcoholUISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholUISwitch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,12 +115,11 @@
 		F9590F6D25978D1700DE5BA0 /* AlcoPedia */ = {
 			isa = PBXGroup;
 			children = (
+				F9C4DE62259B8EB200D4782B /* viewController */,
 				F9590FA5259791E500DE5BA0 /* entity */,
 				F9590F6E25978D1700DE5BA0 /* AppDelegate.swift */,
 				F9590FA62597977500DE5BA0 /* AlcoholDao.swift */,
-				F9590F7025978D1700DE5BA0 /* ViewController.swift */,
-				F9590F9F25978DA300DE5BA0 /* AlcoholType.swift */,
-				F9590F7225978D1700DE5BA0 /* Main.storyboard */,
+				F9C4DE63259BD54D00D4782B /* AlcoholUISwitch.swift */,
 				F9590F7825978D1800DE5BA0 /* Assets.xcassets */,
 				F9590F7A25978D1800DE5BA0 /* LaunchScreen.storyboard */,
 				F9590F7D25978D1800DE5BA0 /* Info.plist */,
@@ -144,8 +151,21 @@
 			children = (
 				F9590FA1259791D100DE5BA0 /* Alcohol+CoreDataClass.swift */,
 				F9590FA2259791D100DE5BA0 /* Alcohol+CoreDataProperties.swift */,
+				F9C4DE5A259B465B00D4782B /* Cockatail+CoreDataClass.swift */,
+				F9C4DE5B259B465B00D4782B /* Cockatail+CoreDataProperties.swift */,
 			);
 			path = entity;
+			sourceTree = "<group>";
+		};
+		F9C4DE62259B8EB200D4782B /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				F9590F7025978D1700DE5BA0 /* ViewController.swift */,
+				F9590F7225978D1700DE5BA0 /* Main.storyboard */,
+				F9C4DE5E259B8E8E00D4782B /* CocktailsViewController.swift */,
+				F9C4DE5F259B8E8E00D4782B /* CocktailsViewController.xib */,
+			);
+			path = viewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C4DE61259B8E8E00D4782B /* CocktailsViewController.xib in Resources */,
 				F9590F7C25978D1800DE5BA0 /* LaunchScreen.storyboard in Resources */,
 				F9590F7925978D1800DE5BA0 /* Assets.xcassets in Resources */,
 				F9590F7425978D1700DE5BA0 /* Main.storyboard in Resources */,
@@ -280,9 +301,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9590FA4259791D100DE5BA0 /* Alcohol+CoreDataProperties.swift in Sources */,
-				F9590FA025978DA300DE5BA0 /* AlcoholType.swift in Sources */,
+				F9C4DE5C259B465B00D4782B /* Cockatail+CoreDataClass.swift in Sources */,
+				F9C4DE5D259B465B00D4782B /* Cockatail+CoreDataProperties.swift in Sources */,
 				F9590F7725978D1700DE5BA0 /* AlcoPedia.xcdatamodeld in Sources */,
+				F9C4DE64259BD54D00D4782B /* AlcoholUISwitch.swift in Sources */,
 				F9590FA72597977500DE5BA0 /* AlcoholDao.swift in Sources */,
+				F9C4DE60259B8E8E00D4782B /* CocktailsViewController.swift in Sources */,
 				F9590FA3259791D100DE5BA0 /* Alcohol+CoreDataClass.swift in Sources */,
 				F9590F7125978D1700DE5BA0 /* ViewController.swift in Sources */,
 				F9590F6F25978D1700DE5BA0 /* AppDelegate.swift in Sources */,

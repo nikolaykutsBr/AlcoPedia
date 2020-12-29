@@ -4,7 +4,11 @@
         <attribute name="alcoholType" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isExist" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
+    <entity name="Cockatail" representedClassName=".Cockatail" syncable="YES">
+        <attribute name="nameCocktail" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Alcohol" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Cockatail" positionX="-63" positionY="0" width="128" height="60"/>
     </elements>
 </model>

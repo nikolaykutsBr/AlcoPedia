@@ -12,14 +12,19 @@ import CoreData
 
 class AlcoholDao{
     
+    static let ENTITY_NAME: String = "Alcohol"
+    static let ALCOHOL_TYPE_FIELD: String = "alcoholType"
+    
     private static func setContext() -> NSManagedObjectContext {
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
         return context
     }
     
-    static func saveAlcoholType(alcoholType: AlcoholType, isExist: Bool){
+    static func saveAlcoholType(alcoholType: String, isExist: Bool){
+        
         let context = setContext()
         let alcohol: Alcohol! = fetchAlcoholEntity(alcoholType: alcoholType)
         
@@ -35,16 +40,16 @@ class AlcoholDao{
         do
         {
             try context.save()
-            print("Alcohol updated")
+            print("Alcohol updated \(alcoholType)  \(isExist)")
         }
         catch { fatalError("Unable to save data.") }
     }
     
-    static func fetchAlcoholEntity(alcoholType: AlcoholType) -> Alcohol! {
+    static func fetchAlcoholEntity(alcoholType: String) -> Alcohol! {
         let context = setContext()
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Alcohol")
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: ENTITY_NAME)
         
-        request.predicate = NSPredicate(format: "alcoholType = %@", String(describing: alcoholType))
+        request.predicate = NSPredicate(format: "\(ALCOHOL_TYPE_FIELD) = %@", alcoholType)
         request.returnsObjectsAsFaults = false
         do {
             let result = try context.fetch(request)
@@ -58,18 +63,25 @@ class AlcoholDao{
         
     }
     
-//    static func fetchAll() {
-//        let context = setContext()
-//        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Alcohol")
-//        
-//        request.returnsObjectsAsFaults = false
-//        do {
-//            let result = try context.fetch(request)
-//            let actualResult = result as! [Alcohol]
-//            
-//        } catch {
-//            print("Failed to fetch alcoholEntity with following type")
-//        
-//        }
-//    }
+    static func fetchAll() -> [Alcohol]{
+        let context = setContext()
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: ENTITY_NAME)
+        var actualResult: [Alcohol] = []
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            actualResult = result as! [Alcohol]
+        } catch {
+            print("Failed to fetch alcoholEntity with following type")
+        
+        }
+        return actualResult
+    }
+    
+    static func checkRecordExists(alcoholType: String) -> Bool {
+        
+        let alcohol: Alcohol! = fetchAlcoholEntity(alcoholType: alcoholType)
+        return alcohol != nil
+    }
+    
 }
