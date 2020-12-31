@@ -8,126 +8,65 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIScrollViewDelegate, UITableViewDataSource {
+
     
-    let alcoholTypes: [String] = ["Vodka","Gin","Tequila","Triple sec"]
-    
-    var buttonChangeScreenToCocktails: UIButton!
-    
-    @IBOutlet weak var scrollView: UIScrollView!
-    
-    
-   
-    
-    
+    var cellsCounter: Int = 0
+    var tableView =  UITableView()
+    let identifier = "MyCell"
+    let alcoholTypes: [String] = ["Vodka","Gin","Tequila","Triple sec","123","Vodka1","Gi2n","Te3quila","Tr4iple sec","5123","Vo3dka","Gi4n","Teq5uila","Tri6ple sec","1273"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         populateDataBase()
-        
-        dynamicAlcoholSwitchesCreation()
-        self.view.addSubview(scrollView)
-        
-        
-//
-//        let gin = AlcoholDao.fetchAlcoholEntity(alcoholType : AlcoholType.GIN)
-//        let vodka = AlcoholDao.fetchAlcoholEntity(alcoholType : AlcoholType.VODKA)
-//        let tequila = AlcoholDao.fetchAlcoholEntity(alcoholType : AlcoholType.TEQUILA)
-//        let tripleSec = AlcoholDao.fetchAlcoholEntity(alcoholType: AlcoholType.TRIPLESEC)
-//
-//        tripleSecSwitch = createSwitch(x: 250, y: 100)
-//        tripleSecSwitch.addTarget(self, action: #selector(self.tripleSecSwitch(_:forEvent:)), for:  UIControl.Event.valueChanged)
-//
-//
-//        checkAvaliableAlcohol(alcoholType: tripleSec, alcoholSwitch: tripleSecSwitch)
-//        checkAvaliableAlcohol(alcoholType: gin, alcoholSwitch: ginSwitch)
-//        checkAvaliableAlcohol(alcoholType: vodka, alcoholSwitch: vodkaSwitch)
-//        checkAvaliableAlcohol(alcoholType: tequila, alcoholSwitch: tequilaSwitch)
-//
-//        buttonChangeScreenToCocktails = createButtonToVeiw(x: 20, y: 500, width: 120, height: 40)
-//        buttonChangeScreenToCocktails.backgroundColor = #colorLiteral(red: 1, green: 0, blue: 0.003921568627, alpha: 1)
-//        buttonChangeScreenToCocktails.setTitle("Igor", for: .normal)
-//        buttonChangeScreenToCocktails.setTitle("Kolya", for: .highlighted)
-//
-//        tripleSecLabel = createLabelForAlcohol(label: "Triple Sec", x: 80, y: 100, width: 100, height: 25)
-//
-//
-     
-        
-    
+        createTableView()
         
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func dynamicAlcoholSwitchesCreation() {
+    func createTableView() {
         
-        scrollView.isScrollEnabled = true
-        scrollView.isUserInteractionEnabled = true
+        self.tableView = UITableView(frame: view.bounds, style: .plain)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
         
-        let alcohols = AlcoholDao.fetchAll()
-        var count = 0
+        self.tableView.delegate = self as? UITableViewDelegate
+        self.tableView.dataSource = self
+        self.tableView.rowHeight = 60.0
+   
         
-        for alcohol in alcohols{
-            var y = 50*count
-            let createdSwitch = createSwitch(alcohol: alcohol, count: count, x: 250, y: y+100)
-            count += 1
-            let createdLabel = createLabelForAlcohol(label: alcohol.alcoholType!, x: 50, y: y+100, width: 150, height: 25)
-            scrollView.addSubview(createdSwitch)
-            scrollView.addSubview(createdLabel)
 
-            
-            
+        
+        view.addSubview(tableView)
+        
+    }
+    
+    func setBottomAnchor (){
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 150).isActive = true
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       return alcoholTypes.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        let alcohols = AlcoholDao.fetchAll()
+        
+        if cellsCounter < alcoholTypes.count{
+            let alcohol = alcohols[cellsCounter]
+            let uiSwitch = createSwitch(alcohol: alcohol, x: 300, y: 15)
+            cell.addSubview(uiSwitch)
+            cell.textLabel?.text = alcohol.alcoholType
+            cellsCounter += 1
         }
-//        mScrollView.isScrollEnabled = true
-//        mScrollView.isUserInteractionEnabled = true
-//        
-//        let numberOfButtons = 16
-//        let numberofRows = 2
-//        
-//        var count = 0
-//        var px = 0
-//        var py = 0
-//        
-//        for _ in 1...numberofRows {
-//            px = 0
-//            
-//            if count < numberOfButtons/2 {
-//                for j in 1...numberOfButtons/2 {
-//                    count += 1
-//                    
-//                    let Button = UIButton()
-//                    Button.tag = count
-//                    Button.frame = CGRect(x: px+10, y: py+10, width: 100, height: 45)
-//                    Button.backgroundColor = UIColor.black
-//                    Button.setTitle("Hello \(j) ", for: .normal)
-//                    Button.addTarget(self, action: #selector(scrollButtonAction), for: .touchUpInside)
-//                    mScrollView.addSubview(Button)
-//                    px = px + Int(mScrollView.frame.width)/2 - 30
-//                }
-//            }else{
-//                
-//                for j in numberOfButtons/2+1...numberOfButtons {
-//                    count += 1
-//                    
-//                    let Button = UIButton()
-//                    Button.tag = count
-//                    Button.frame = CGRect(x: px+10, y: py+10, width: 100, height: 45)
-//                    Button.backgroundColor = UIColor.black
-//                    Button.setTitle("Hello \(j) ", for: .normal)
-//                    Button.addTarget(self, action: #selector(scrollButtonAction), for: .touchUpInside)
-//                    mScrollView.addSubview(Button)
-//                    px = px + Int(mScrollView.frame.width)/2 - 30
-//                }
-//                
-//                
-//            }
-//            
-//            py =  Int(mScrollView.frame.height)-70
-//        }
-//        
-//        mScrollView.contentSize = CGSize(width: px, height: py)
-//        
+        return cell
     }
     
     func populateDataBase(){
@@ -151,9 +90,8 @@ class ViewController: UIViewController {
     
     //Programmaticaly creating switch
     
-    func createSwitch(alcohol: Alcohol, count: Int, x: Int, y: Int) -> AlcoholUISwitch{
+    func createSwitch(alcohol: Alcohol, x: Int, y:Int) -> AlcoholUISwitch{
         let createdSwitch = AlcoholUISwitch()
-        createdSwitch.tag = count
         createdSwitch.alcoholType = alcohol.alcoholType!
         createdSwitch.frame = CGRect(x: x, y: y, width: 0, height: 0)
         createdSwitch.addTarget(self, action: #selector(switchAction(sender:forEvent:)), for: UIControl.Event.valueChanged)
@@ -161,6 +99,7 @@ class ViewController: UIViewController {
         self.view.addSubview(createdSwitch)
         return createdSwitch
     }
+    
     
     @objc func switchAction (sender: UISwitch, forEvent event: UIEvent){
         let alcoholSwitch = sender as? AlcoholUISwitch
