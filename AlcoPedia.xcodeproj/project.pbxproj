@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F9248A9B25AE0D72002F1038 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9248A9A25AE0D72002F1038 /* RecipeViewController.swift */; };
+		F931BB50259F78C5006FCA66 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F931BB4F259F78C5006FCA66 /* ProfileViewController.swift */; };
 		F9590F6F25978D1700DE5BA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9590F6E25978D1700DE5BA0 /* AppDelegate.swift */; };
 		F9590F7125978D1700DE5BA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9590F7025978D1700DE5BA0 /* ViewController.swift */; };
 		F9590F7425978D1700DE5BA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9590F7225978D1700DE5BA0 /* Main.storyboard */; };
@@ -21,7 +23,6 @@
 		F9C4DE5C259B465B00D4782B /* Cockatail+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C4DE5A259B465B00D4782B /* Cockatail+CoreDataClass.swift */; };
 		F9C4DE5D259B465B00D4782B /* Cockatail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C4DE5B259B465B00D4782B /* Cockatail+CoreDataProperties.swift */; };
 		F9C4DE60259B8E8E00D4782B /* CocktailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C4DE5E259B8E8E00D4782B /* CocktailsViewController.swift */; };
-		F9C4DE61259B8E8E00D4782B /* CocktailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9C4DE5F259B8E8E00D4782B /* CocktailsViewController.xib */; };
 		F9C4DE64259BD54D00D4782B /* AlcoholUISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C4DE63259BD54D00D4782B /* AlcoholUISwitch.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F9248A9A25AE0D72002F1038 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		F931BB4F259F78C5006FCA66 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F9590F6B25978D1700DE5BA0 /* AlcoPedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlcoPedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9590F6E25978D1700DE5BA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9590F7025978D1700DE5BA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +66,6 @@
 		F9C4DE5A259B465B00D4782B /* Cockatail+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cockatail+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F9C4DE5B259B465B00D4782B /* Cockatail+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cockatail+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F9C4DE5E259B8E8E00D4782B /* CocktailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsViewController.swift; sourceTree = "<group>"; };
-		F9C4DE5F259B8E8E00D4782B /* CocktailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CocktailsViewController.xib; sourceTree = "<group>"; };
 		F9C4DE63259BD54D00D4782B /* AlcoholUISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoholUISwitch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,7 +165,8 @@
 				F9590F7025978D1700DE5BA0 /* ViewController.swift */,
 				F9590F7225978D1700DE5BA0 /* Main.storyboard */,
 				F9C4DE5E259B8E8E00D4782B /* CocktailsViewController.swift */,
-				F9C4DE5F259B8E8E00D4782B /* CocktailsViewController.xib */,
+				F931BB4F259F78C5006FCA66 /* ProfileViewController.swift */,
+				F9248A9A25AE0D72002F1038 /* RecipeViewController.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -272,7 +275,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9C4DE61259B8E8E00D4782B /* CocktailsViewController.xib in Resources */,
 				F9590F7C25978D1800DE5BA0 /* LaunchScreen.storyboard in Resources */,
 				F9590F7925978D1800DE5BA0 /* Assets.xcassets in Resources */,
 				F9590F7425978D1700DE5BA0 /* Main.storyboard in Resources */,
@@ -306,7 +308,9 @@
 				F9590F7725978D1700DE5BA0 /* AlcoPedia.xcdatamodeld in Sources */,
 				F9C4DE64259BD54D00D4782B /* AlcoholUISwitch.swift in Sources */,
 				F9590FA72597977500DE5BA0 /* AlcoholDao.swift in Sources */,
+				F931BB50259F78C5006FCA66 /* ProfileViewController.swift in Sources */,
 				F9C4DE60259B8E8E00D4782B /* CocktailsViewController.swift in Sources */,
+				F9248A9B25AE0D72002F1038 /* RecipeViewController.swift in Sources */,
 				F9590FA3259791D100DE5BA0 /* Alcohol+CoreDataClass.swift in Sources */,
 				F9590F7125978D1700DE5BA0 /* ViewController.swift in Sources */,
 				F9590F6F25978D1700DE5BA0 /* AppDelegate.swift in Sources */,

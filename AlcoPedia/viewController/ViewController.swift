@@ -9,7 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController, UIScrollViewDelegate, UITableViewDataSource {
-
     
     var cellsCounter: Int = 0
     var tableView =  UITableView()
@@ -19,10 +18,11 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITableViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Bar"
+        
         populateDataBase()
         createTableView()
         
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     func createTableView() {
@@ -33,16 +33,9 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITableViewDataSou
         self.tableView.delegate = self as? UITableViewDelegate
         self.tableView.dataSource = self
         self.tableView.rowHeight = 60.0
-   
-        
-
         
         view.addSubview(tableView)
         
-    }
-    
-    func setBottomAnchor (){
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 150).isActive = true
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -61,7 +54,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITableViewDataSou
         
         if cellsCounter < alcoholTypes.count{
             let alcohol = alcohols[cellsCounter]
-            let uiSwitch = createSwitch(alcohol: alcohol, x: 300, y: 15)
+            let uiSwitch = createSwitch(alcohol: alcohol)
             cell.addSubview(uiSwitch)
             cell.textLabel?.text = alcohol.alcoholType
             cellsCounter += 1
@@ -90,16 +83,16 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITableViewDataSou
     
     //Programmaticaly creating switch
     
-    func createSwitch(alcohol: Alcohol, x: Int, y:Int) -> AlcoholUISwitch{
+    func createSwitch(alcohol: Alcohol) -> AlcoholUISwitch{
         let createdSwitch = AlcoholUISwitch()
         createdSwitch.alcoholType = alcohol.alcoholType!
-        createdSwitch.frame = CGRect(x: x, y: y, width: 0, height: 0)
+//        createdSwitch.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 30, leading: 250, bottom: 30, trailing: 20)
+        createdSwitch.center = CGPoint(x: 330, y: 30)
         createdSwitch.addTarget(self, action: #selector(switchAction(sender:forEvent:)), for: UIControl.Event.valueChanged)
         createdSwitch.isOn = alcohol.isExist
         self.view.addSubview(createdSwitch)
         return createdSwitch
     }
-    
     
     @objc func switchAction (sender: UISwitch, forEvent event: UIEvent){
         let alcoholSwitch = sender as? AlcoholUISwitch

@@ -8,12 +8,26 @@
 
 import UIKit
 
-class CocktailsViewController: UIViewController {
+class CocktailsViewController: UIViewController, UIScrollViewDelegate, UITableViewDataSource {
 
+    
+    let recipeViewController: RecipeViewController = RecipeViewController()
+    var tableView =  UITableView()
+    let identifier = "MyCell"
+    let imagesOfCocktails: [UIImage] =  [UIImage(named: "royal_shot")!,UIImage(named: "jellyfish")!,UIImage(named: "vodka_with_redbull")!,UIImage(named: "god_bless_america")!,UIImage(named: "bitter_pills")!,UIImage(named: "bird_shit")!]
+    let namesOfCocktails: [String] =  ["Royal Shot","Jellyfish","Vodka with Redbull","God Bless America","Bitter Pills","Bird Shit"]
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.title = "Cockatils"
+        
+        createTableView()
+        
+      
     }
 
 
@@ -26,5 +40,43 @@ class CocktailsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
+   
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return imagesOfCocktails.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        
+        cell.imageView?.image = imagesOfCocktails[indexPath.row]
+        cell.textLabel?.text = namesOfCocktails[indexPath.row]
+        cell.accessoryType = .disclosureIndicator
+            
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath){
+        
+    }
+
+
+    func createTableView() {
+        
+        self.tableView = UITableView(frame: view.bounds, style: .plain)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
+        
+        self.tableView.delegate = self as? UITableViewDelegate
+        self.tableView.dataSource = self
+        self.tableView.rowHeight = 150.0
+        
+        view.addSubview(tableView)
+        
+    }
+    
+    
+    
+    
 }

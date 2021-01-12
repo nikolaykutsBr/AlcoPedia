@@ -16,6 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let barViewController = ViewController()
+        let cocktailsViewController = CocktailsViewController()
+        let profileViewController = ProfileViewController()
+        
+        let tabBarController = UITabBarController()
+        
+        tabBarController.setViewControllers([barViewController,cocktailsViewController,profileViewController], animated: true)
+        
+        self.window?.rootViewController = tabBarController
+        self.window?.makeKeyAndVisible()
+        
+    
         // Override point for customization after application launch.
         return true
     }
