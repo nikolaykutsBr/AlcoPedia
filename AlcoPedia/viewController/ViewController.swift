@@ -10,22 +10,28 @@ import UIKit
 
 class ViewController: UIViewController, UIScrollViewDelegate, UITableViewDataSource {
     
-    var cellsCounter: Int = 0
-    var tableView =  UITableView()
-    let identifier = "MyCell"
-    let alcoholTypes: [String] = ["Vodka","Gin","Tequila","Triple sec","123","Vodka1","Gi2n","Te3quila","Tr4iple sec","5123","Vo3dka","Gi4n","Teq5uila","Tri6ple sec","1273"]
+    private var searchResult: [String] = []
+    private var cellsCounter: Int = 0
+    private var tableView =  UITableView()
+    private let identifier = "MyCell"
+    private let alcoholTypes: [String] = ["Vodka","Gin","Tequila","Triple sec","123","Vodka1","Gi2n","Te3quila","Tr4iple sec","5123","Vo3dka","Gi4n","Teq5uila","Tri6ple sec","1273"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.title = "Bar"
         
+        
+        setUpNavigationBar()
         populateDataBase()
         createTableView()
-        
     }
     
-    func createTableView() {
+
+    
+    // Creating table view and cells
+    
+    private func createTableView() {
         
         self.tableView = UITableView(frame: view.bounds, style: .plain)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
@@ -38,7 +44,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITableViewDataSou
         
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    private func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
@@ -51,18 +57,22 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITableViewDataSou
         
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         let alcohols = AlcoholDao.fetchAll()
+        let alcohol = alcohols[indexPath.row]
         
+        cell.textLabel?.text = alcohol.alcoholType
         if cellsCounter < alcoholTypes.count{
-            let alcohol = alcohols[cellsCounter]
             let uiSwitch = createSwitch(alcohol: alcohol)
             cell.addSubview(uiSwitch)
-            cell.textLabel?.text = alcohol.alcoholType
+            cell.accessoryType = .disclosureIndicator
             cellsCounter += 1
-        }
+        } 
         return cell
     }
     
-    func populateDataBase(){
+    
+    // Populate database
+    
+    private func populateDataBase(){
         for alcoholType in alcoholTypes{
             let isExist = AlcoholDao.checkRecordExists(alcoholType: alcoholType)
             if !isExist {
@@ -71,9 +81,25 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITableViewDataSou
         }
     }
     
+    //Search Bar Logic
+    
+    private func filterContent(for searchText: String) {
+         searchResult = alcoholTypes.filter({ (title: String) -> Bool in
+            let match = title.range(of: searchText, options: .caseInsensitive)
+            return match != nil
+        })
+    }
+    
+    private func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text {
+            filterContent(for: searchText)
+            tableView.reloadData()
+        }
+    }
+    
     //Checking alcohol in DB and set state of UISwitch
     
-    func checkAvaliableAlcohol(alcoholType: Alcohol! ,alcoholSwitch: UISwitch){
+    private func checkAvaliableAlcohol(alcoholType: Alcohol! ,alcoholSwitch: UISwitch){
         if alcoholType != nil {
             alcoholSwitch.setOn(alcoholType!.isExist, animated: true)
         } else {
@@ -81,27 +107,26 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITableViewDataSou
         }
     }
     
-    //Programmaticaly creating switch
+    //Programmaticaly creating switch and switch function
     
-    func createSwitch(alcohol: Alcohol) -> AlcoholUISwitch{
+    private func createSwitch(alcohol: Alcohol) -> AlcoholUISwitch{
         let createdSwitch = AlcoholUISwitch()
         createdSwitch.alcoholType = alcohol.alcoholType!
-//        createdSwitch.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 30, leading: 250, bottom: 30, trailing: 20)
-        createdSwitch.center = CGPoint(x: 330, y: 30)
+        createdSwitch.center = CGPoint(x: 300, y: 30)
         createdSwitch.addTarget(self, action: #selector(switchAction(sender:forEvent:)), for: UIControl.Event.valueChanged)
         createdSwitch.isOn = alcohol.isExist
         self.view.addSubview(createdSwitch)
         return createdSwitch
     }
     
-    @objc func switchAction (sender: UISwitch, forEvent event: UIEvent){
+    @objc private func switchAction (sender: UISwitch, forEvent event: UIEvent){
         let alcoholSwitch = sender as? AlcoholUISwitch
         AlcoholDao.saveAlcoholType(alcoholType: alcoholSwitch!.alcoholType , isExist: sender.isOn)
     }
     
     //Programmaticaly creating button
     
-    func createButtonToVeiw(x: Int,y: Int, width: Int, height: Int) -> UIButton {
+    private func createButtonToVeiw(x: Int,y: Int, width: Int, height: Int) -> UIButton {
         let createButton = UIButton()
         createButton.frame = CGRect(x: x, y: y, width: width, height: height)
         self.view.addSubview(createButton)
@@ -110,7 +135,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITableViewDataSou
    
     //Programmaticaly creating label of alcohol
     
-    func createLabelForAlcohol(label: String, x: Int, y: Int, width: Int, height: Int) -> UILabel{
+    private func createLabelForAlcohol(label: String, x: Int, y: Int, width: Int, height: Int) -> UILabel{
         let createlabel = UILabel()
         createlabel.frame = CGRect(x: x, y: y, width: width, height: height)
         createlabel.textAlignment = .center
@@ -119,5 +144,10 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITableViewDataSou
         return createlabel
     }
 
+    private func setUpNavigationBar() {
+        self.navigationItem.title = "Bar"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
 }
 

@@ -10,22 +10,35 @@ import UIKit
 
 class RecipeViewController: UIViewController {
 
+    
+    private let identifierForCocktail = "ShowRecipe"
+    var recipeName: String = ""
+    var imageName: UIImage = UIImage()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "Recipe of \(recipeName)"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
 
-        self.view.backgroundColor = .black
-        // Do any additional setup after loading the view.
+        
+        setImageAndName(name: recipeName, name: imageName)
+        self.view.backgroundColor = .white
+        
     }
     
+    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setImageAndName(name: String, name image : UIImage){
+        let imageOfRecipe = UIImageView(image: image)
+        let nameOfRecipe = UILabel()
+        nameOfRecipe.frame = CGRect(x: 20, y: 80, width: 500, height: 100)
+        nameOfRecipe.text = name
+        imageOfRecipe.frame = CGRect(x: 20, y: 150, width: 120, height: 250)
+        self.view.addSubview(imageOfRecipe)
+        self.view.addSubview(nameOfRecipe)
     }
-    */
+    
 
 }

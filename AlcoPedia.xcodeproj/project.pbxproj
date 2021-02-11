@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F9248A9B25AE0D72002F1038 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9248A9A25AE0D72002F1038 /* RecipeViewController.swift */; };
 		F931BB50259F78C5006FCA66 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F931BB4F259F78C5006FCA66 /* ProfileViewController.swift */; };
+		F933BD4225B64782009D85D2 /* SearchBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F933BD4125B64782009D85D2 /* SearchBarItem.swift */; };
+		F933BD4425B6DB64009D85D2 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F933BD4325B6DB64009D85D2 /* TableView.swift */; };
 		F9590F6F25978D1700DE5BA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9590F6E25978D1700DE5BA0 /* AppDelegate.swift */; };
 		F9590F7125978D1700DE5BA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9590F7025978D1700DE5BA0 /* ViewController.swift */; };
 		F9590F7425978D1700DE5BA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9590F7225978D1700DE5BA0 /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		F9248A9A25AE0D72002F1038 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		F931BB4F259F78C5006FCA66 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F933BD4125B64782009D85D2 /* SearchBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarItem.swift; sourceTree = "<group>"; };
+		F933BD4325B6DB64009D85D2 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		F9590F6B25978D1700DE5BA0 /* AlcoPedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlcoPedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9590F6E25978D1700DE5BA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9590F7025978D1700DE5BA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 				F9590F6E25978D1700DE5BA0 /* AppDelegate.swift */,
 				F9590FA62597977500DE5BA0 /* AlcoholDao.swift */,
 				F9C4DE63259BD54D00D4782B /* AlcoholUISwitch.swift */,
+				F933BD4325B6DB64009D85D2 /* TableView.swift */,
+				F933BD4125B64782009D85D2 /* SearchBarItem.swift */,
 				F9590F7825978D1800DE5BA0 /* Assets.xcassets */,
 				F9590F7A25978D1800DE5BA0 /* LaunchScreen.storyboard */,
 				F9590F7D25978D1800DE5BA0 /* Info.plist */,
@@ -162,11 +168,11 @@
 		F9C4DE62259B8EB200D4782B /* viewController */ = {
 			isa = PBXGroup;
 			children = (
-				F9590F7025978D1700DE5BA0 /* ViewController.swift */,
 				F9590F7225978D1700DE5BA0 /* Main.storyboard */,
+				F9590F7025978D1700DE5BA0 /* ViewController.swift */,
 				F9C4DE5E259B8E8E00D4782B /* CocktailsViewController.swift */,
-				F931BB4F259F78C5006FCA66 /* ProfileViewController.swift */,
 				F9248A9A25AE0D72002F1038 /* RecipeViewController.swift */,
+				F931BB4F259F78C5006FCA66 /* ProfileViewController.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -305,8 +311,10 @@
 				F9590FA4259791D100DE5BA0 /* Alcohol+CoreDataProperties.swift in Sources */,
 				F9C4DE5C259B465B00D4782B /* Cockatail+CoreDataClass.swift in Sources */,
 				F9C4DE5D259B465B00D4782B /* Cockatail+CoreDataProperties.swift in Sources */,
+				F933BD4425B6DB64009D85D2 /* TableView.swift in Sources */,
 				F9590F7725978D1700DE5BA0 /* AlcoPedia.xcdatamodeld in Sources */,
 				F9C4DE64259BD54D00D4782B /* AlcoholUISwitch.swift in Sources */,
+				F933BD4225B64782009D85D2 /* SearchBarItem.swift in Sources */,
 				F9590FA72597977500DE5BA0 /* AlcoholDao.swift in Sources */,
 				F931BB50259F78C5006FCA66 /* ProfileViewController.swift in Sources */,
 				F9C4DE60259B8E8E00D4782B /* CocktailsViewController.swift in Sources */,
@@ -491,6 +499,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KQU4E2RYX9;
 				INFOPLIST_FILE = AlcoPedia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -509,6 +518,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KQU4E2RYX9;
 				INFOPLIST_FILE = AlcoPedia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

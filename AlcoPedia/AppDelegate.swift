@@ -12,16 +12,17 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    private var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        let barViewController = ViewController()
-        let cocktailsViewController = CocktailsViewController()
-        let profileViewController = ProfileViewController()
+        let profileViewController = UINavigationController.init(rootViewController: ProfileViewController())
+        let barViewController = UINavigationController.init(rootViewController: ViewController())
+        let cocktailsViewController = UINavigationController.init(rootViewController: CocktailsViewController())
+        let recipeViewController = UINavigationController.init(rootViewController: RecipeViewController())
         
         let tabBarController = UITabBarController()
         

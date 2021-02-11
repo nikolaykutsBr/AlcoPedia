@@ -51,6 +51,7 @@ class AlcoholDao{
         
         request.predicate = NSPredicate(format: "\(ALCOHOL_TYPE_FIELD) = %@", alcoholType)
         request.returnsObjectsAsFaults = false
+        
         do {
             let result = try context.fetch(request)
             let actualResult = result as! [Alcohol]
